@@ -27,6 +27,9 @@ function showData(taco) {
    console.log("it works");
 }
 
+dataMessages.open("GET", "messages.json");
+dataMessages.send();
+
 
 // let enterMessage = require("./");
 // let createDButton = require("./");
