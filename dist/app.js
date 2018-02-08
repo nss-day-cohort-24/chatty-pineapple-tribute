@@ -1,10 +1,32 @@
 (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
+//This module will take the users input and will return the message after a key press
+
+"use strict";
+
+let input = document.querySelector('#inputdefault');
+let messages = [];
+
+function submitMessage(e) {
+  // console.log("any text");
+  if(e.keyCode == 13 && input.value !== null) {
+    messages.push(input.value);
+    console.log(messages);
+    input.value = "";
+  }
+}
+// getMessages() {
+//   return messages;
+// };
+
+module.exports = {submitMessage};
+// , getMessages
+
+},{}],2:[function(require,module,exports){
 "use strict";
 
 let dataMessages = new XMLHttpRequest();
 
 dataMessages.addEventListener("load", postMessage);
-
 
 function postMessage(event) {
     console.log("keep going");
@@ -14,7 +36,7 @@ function postMessage(event) {
 }
 
 function showData(taco) {
-    let messageDiv = document.getElementById("chatlog");
+    let messageDiv = document.getElementById("chatbox");
     let messageJson = '';
     let item;
     for (item in taco){
@@ -32,7 +54,7 @@ dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
 
-// let enterMessage = require("./");
+let enterMessage = require("./input");
 // let createDButton = require("./");
 // let clearMessages = require("./");
 // let changeTheme = require("./");
@@ -44,6 +66,8 @@ dataMessages.send();
 //   clearMessages,
 //   changeTheme,
 //   deleteMessage
-// }
+// };
+document.addEventListener("keydown", enterMessage.submitMessage);
+// console.log(chatBox.enterMessage.submitMessage());
 
-},{}]},{},[1]);
+},{"./input":1}]},{},[2]);
