@@ -8,11 +8,14 @@ let messages = [];
 function submitMessage(e) {
   // console.log("any text");
   if(e.keyCode == 13 && input.value !== null) {
-    message.push(input.value);
+    messages.push(input.value);
+    console.log(messages);
+    input.value = "";
   }
 }
-getMessages() = {
-  return messages;
-}
+// getMessages() {
+//   return messages;
+// };
 
-module.exports = {submitMessage, getMessages};
+module.exports = {submitMessage};
+// , getMessages

@@ -4,16 +4,22 @@
 "use strict";
 
 let input = document.querySelector('input');
-let message = "";
+let messages = [];
 
 function submitMessage(e) {
   // console.log("any text");
   if(e.keyCode == 13 && input.value !== null) {
-    message = input.value;
+    messages.push(input.value);
+    console.log(messages);
+    input.value = "";
   }
 }
+// getMessages() {
+//   return messages;
+// };
 
 module.exports = {submitMessage};
+// , getMessages
 
 },{}],2:[function(require,module,exports){
 "use strict";
