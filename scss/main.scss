@@ -1,10 +1,11 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
-
+$secondary-color: rgb(154, 228, 34);
 
 body {
     font: 125% $font-stack;
     color: $primary-color;
+    padding-top: 100px;
   }
 
 .navbar {
@@ -19,9 +20,16 @@ body {
 
 #chatbox {
     height: 200px;
+    margin: 10px;
+   // background-color: $secondary-color; 
+    
 
 }
 
 .panel-chat{
     line-height: 5em !important;
+}
+
+.initBG { 
+    background-color: $secondary-color; 
 }
