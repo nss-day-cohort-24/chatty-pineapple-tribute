@@ -1,17 +1,35 @@
-//This module will delete individual messages.
-
-// This module should contain a function that accepts an element id, and the user message, and then add the user's message - along with the delete button - to the specified parent element. Each message should be stored in a private array in this module. This module should also expose a function to read all messages, and delete a single message.
-
-// This module should accept a message element id and then remove the correct element from the DOM. This module should also remove the corresponding message from the private array that was created in the previous module.
-
-"use strict";
+var chatLog = document.getElementById("chatlog");
+console.log("what is theElement?", chatLog);
 
 
+// let userMessageInput = document.getElementById("user-msg");
+
+// Function expression for the el....
+var newMessageLine = function sentIt() {
+    var userMessageInput = document.getElementById("user-msg");
+    console.log("what is userMessageInput?", userMessageInput);
+    var printValue = chatLog;
+    console.log("what is user msg?", printValue);
+    // console.log("what is the parent element", parentElement);
+    printValue.innerHTML += userMessageInput;
+};
 
 
+var addDelButton = function createDelButton() {
+    var deleteButton = document.createElement("BUTTON"); // Create a <button> element
+    var textNode = document.createTextNode("Delete Line"); // Create a text node
+    deleteButton.appendChild(t); // Append the text to <button>
+    document.chatLog.appendChild(btn); // Append <button> to <body>;
+};
 
 
+var userMessageInput = document.getElementById("user-msg");
 
-
-
-module.exports = ;
+userMessageInput.addEventListener('keypress', function(e) {
+    if (e.keyCode === 13) {
+        var userString = document.getElementById("user-msg").value;
+        console.log("what did they type?", userString);
+        console.log("YOUR KEY IS WORKING!!!");
+        // newMessageLine();
+    }
+});

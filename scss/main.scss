@@ -1,0 +1,27 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+
+body {
+    font: 125% $font-stack;
+    color: $primary-color;
+  }
+
+.navbar {
+    color: rgb(44, 85, 133);
+    height:75px;
+}
+
+.page-header {
+    text-align: center;
+    color: white;
+}
+
+#chatbox {
+    height: 200px;
+
+}
+
+.panel-chat{
+    line-height: 5em !important;
+}
