@@ -19,12 +19,17 @@ function showData(taco) {
     let item;
     for (item in taco){
         let messageItem = taco[item];
-          messageJson += `<div><h2> ${messageItem.message}</h2></div>`;
+
+          messageJson += `<div><h2> ${messageItem.user}:${messageItem.message}</h2></div>`;
     }
+
 
    messageDiv.innerHTML = messageJson;
    console.log("it works");
 }
+
+dataMessages.open("GET", "messages.json");
+dataMessages.send();
 
 
 // let enterMessage = require("./");
