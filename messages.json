@@ -1,20 +1,26 @@
 [
   {
-    "message": "Are we there yet?"
+    "user": "Jhonny_Brav0",
+    "message": "Can anyone help me figure out how to change the theme?"
   },
   {
-    "message": "No."
+    "user": "NeoThe1",
+    "message": " ...but the matrix..."
   },
   {
-    "message": "How about now?"
+    "user": "Tyler_Durden",
+    "message": "@Jhonny_Brav0  Try the toggle button labeled theme. Its in the nav bar."
   },
   {
-    "message": "No!"
+    "user":"Jhonny_Brav0",
+    "message": "Hey that worked! Thanks @Tyler_Durden"
   },
   {
-    "message": "Now?"
+    "user": "Jhon_Wark",
+    "message": "@Channel: School will be closed Friday due to winter blizzard. Everyone stay safe!"
   },
   {
-    "message": "NO!"
+    "user": "NeoTheOne",
+    "message": "What HTML tag can I use to make a word really stand out?"
   }
 ]
