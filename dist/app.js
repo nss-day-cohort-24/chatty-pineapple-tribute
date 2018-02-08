@@ -3,7 +3,7 @@
 
 "use strict";
 
-let input = document.querySelector('input');
+let input = document.querySelector('#inputdefault');
 let messages = [];
 
 function submitMessage(e) {
@@ -36,7 +36,7 @@ function postMessage(event) {
 }
 
 function showData(taco) {
-    let messageDiv = document.getElementById("chatlog");
+    let messageDiv = document.getElementById("chatbox");
     let messageJson = '';
     let item;
     for (item in taco){

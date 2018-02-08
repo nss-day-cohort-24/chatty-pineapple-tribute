@@ -2,7 +2,7 @@
 
 "use strict";
 
-let input = document.querySelector('input');
+let input = document.querySelector('#inputdefault');
 let messages = [];
 
 function submitMessage(e) {
@@ -13,9 +13,8 @@ function submitMessage(e) {
     input.value = "";
   }
 }
-// getMessages() {
-//   return messages;
-// };
+getMessages() {
+  return messages;
+};
 
-module.exports = {submitMessage};
-// , getMessages
+module.exports = {submitMessage, getMessages};

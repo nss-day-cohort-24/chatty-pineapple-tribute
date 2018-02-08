@@ -12,7 +12,7 @@ function postMessage(event) {
 }
 
 function showData(taco) {
-    let messageDiv = document.getElementById("chatlog");
+    let messageDiv = document.getElementById("chatbox");
     let messageJson = '';
     let item;
     for (item in taco){
@@ -31,7 +31,7 @@ dataMessages.send();
 
 
 let enterMessage = require("./input");
-// let createDButton = require("./");
+let getMessages = require("./input");
 // let clearMessages = require("./");
 // let changeTheme = require("./");
 // let deleteMessage = require("./");
