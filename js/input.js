@@ -2,14 +2,13 @@
 
 "use strict";
 
+let input = document.getElementsByTagName('input');
 
+newMessage = function(e) {
+  if(e.keyCode == 13 && input.value !== null) {
+    var message = input.value;
+    return message;
+  }
+}
 
-
-
-
-
-
-
-
-
-module.exports = ;
+module.exports = newMessage;
