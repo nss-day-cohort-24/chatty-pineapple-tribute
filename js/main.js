@@ -13,17 +13,17 @@ function postMessage(event) {
 }
 
 function showData(taco) {
-    let messageDiv = document.getElementById("chatlog");
+    let messageDiv = document.getElementById("chatbox");
     let messageJson = '';
     let item;
     for (item in taco){
         let messageItem = taco[item];
 
-          messageJson += `<div><h2> ${messageItem.user}:${messageItem.message}</h2></div>`;
+          messageJson += `<div id="textOptions"><h5> ${messageItem.user}:${messageItem.message}<h5></div>`;
     }
 
 
-   messageDiv.innerHTML = messageJson;
+   messageDiv.innerHTML=messageJson;
    console.log("it works");
 }
 
