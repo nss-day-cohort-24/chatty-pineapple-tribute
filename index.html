@@ -6,7 +6,17 @@
 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/styles.css"> 
+=======
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+>>>>>>> master
+=======
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+>>>>>>> 66567128ce2243056f7e09bc7fd29a2dcfe944c9
 </head>
 <body>
     <header>
@@ -32,13 +42,13 @@
                             Clear Messages
                           </button>
                         </div><!--panel-heading clr msg-->
-
-                          <div class="panel-body panel-chat" id="chatbox">Chatbox</div>
+                         
+                          <div class="panel-body"><div id="chatbox" class="initBG">Chatbox</div></div>
                         </div><!--panel panel-default-->
 
                         <div class="panel panel-default"><!--clear msg button-->
-
-                          <div class="panel-body">
+                          
+                          <div class="panel-body initBG">
                                                  <form onSubmit="return false;">
                                                       <div class="form-group">
                                                           <label for="inputdefault">Enter Message here:</label>
@@ -49,7 +59,7 @@
                            </div><!--class="panel-body-->
                                            <div class="panel-footer">
                                               <div class="checkbox">
-                                                <label><input type="checkbox" value="">Change Background</label>
+                                                <label><input type="checkbox" onClick="BG('DIV_id', this);" value="">Change Background</label>
                                               </div>
                                               <div class="checkbox">
                                                 <label><input type="checkbox" value="">Change Text Size</label>
@@ -66,6 +76,8 @@
               <div id="chatlog">chatlog</div>
               <div id="messageinput">messageinput</div>
               <div id="themechange">themechange</div>-->
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="dist/app.js"></script>
 </body>
 </html>
