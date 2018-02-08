@@ -2,21 +2,17 @@
 
 "use strict";
 
-function bg1(){
-	document.getElementById("chatbox").style.cssText="background-color:#6699FF;";
+function themeColor(x, _this) {
+	if (_this.checked) {
+	  x.style.backgroundColor = '#0000FF';
+	} else  {
+	  x.style.backgroundColor = 'rgb(190, 214, 221)';
 	}
-function bg2(){
-	document.getElementById("chatbox").style.cssText="background-color:#FFCC66;";
-	}	
-function BG (it, box) {
-    var vis = (box.checked) ? bg1() : bg2();
-	return vis;
-}
+  }
 
 
 
 
 
 
-
-// module.exports = ;
+// module.exports = themeColor;
