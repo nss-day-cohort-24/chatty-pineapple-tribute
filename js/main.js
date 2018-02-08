@@ -4,7 +4,6 @@ let dataMessages = new XMLHttpRequest();
 
 dataMessages.addEventListener("load", postMessage);
 
-
 function postMessage(event) {
     console.log("keep going");
     let messageJson = JSON.parse(event.target.responseText);
@@ -13,7 +12,7 @@ function postMessage(event) {
 }
 
 function showData(taco) {
-    let messageDiv = document.getElementById("chatlog");
+    let messageDiv = document.getElementById("chatbox");
     let messageJson = '';
     let item;
     for (item in taco){
@@ -31,8 +30,8 @@ dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
 
-// let enterMessage = require("./");
-// let createDButton = require("./");
+let enterMessage = require("./input");
+let getMessages = require("./input");
 // let clearMessages = require("./");
 // let changeTheme = require("./");
 // let deleteMessage = require("./");
@@ -43,4 +42,6 @@ dataMessages.send();
 //   clearMessages,
 //   changeTheme,
 //   deleteMessage
-// }
+// };
+document.addEventListener("keydown", enterMessage.submitMessage);
+// console.log(chatBox.enterMessage.submitMessage());
