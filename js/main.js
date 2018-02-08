@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-let enterMessage = require("./input");
-=======
 "use strict";
 
 let dataMessages = new XMLHttpRequest();
@@ -30,7 +27,6 @@ function showData(taco) {
 
 
 // let enterMessage = require("./");
->>>>>>> master
 // let createDButton = require("./");
 // let clearMessages = require("./");
 // let changeTheme = require("./");
