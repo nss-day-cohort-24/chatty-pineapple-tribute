@@ -32,11 +32,11 @@ function showData(taco) {
 // let changeTheme = require("./");
 // let deleteMessage = require("./");
 
-let chatBox = {
-      enterMessage,
+// let chatBox = {
+      // enterMessage,
 //   createDButton,
 //   clearMessages,
 //   changeTheme,
 //   deleteMessage
 // }
-console.log(chatBox.newMessage);
+// console.log(chatBox.newMessage);
