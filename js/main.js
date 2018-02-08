@@ -19,8 +19,8 @@ function showData(taco) {
     for (item in taco){
         let messageItem = taco[item];
 
-          messageJson += `<div><h2> ${messageItem.user}:${messageItem.message}</h2></div>`
-    };
+          messageJson += `<div><h2> ${messageItem.user}:${messageItem.message}</h2></div>`;
+    }
 
 
    messageDiv.innerHTML = messageJson;
