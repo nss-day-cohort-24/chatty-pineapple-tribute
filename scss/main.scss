@@ -1,15 +1,17 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack: 'Montserrat', sans-serif;
 $primary-color: #333;
-
+$secondary-color: #DCDCDC;
+$main-color: #7acdcf;
 
 body {
     font: 125% $font-stack;
     color: $primary-color;
+    padding-top: 100px;
   }
 
-.navbar {
-    color: rgb(44, 85, 133);
-    height:75px;
+  .navbar {
+    background-color: $main-color;
+    border-color: #E7E7E7;
 }
 
 .page-header {
@@ -19,9 +21,16 @@ body {
 
 #chatbox {
     height: 200px;
+    margin: 10px;
+   // background-color: $secondary-color; 
+    
 
 }
 
 .panel-chat{
-    line-height: 5em !important;
+    line-height: 1.6em !important;
 }
+
+/*.initBG { 
+    background-color: $secondary-color; 
+}*/
