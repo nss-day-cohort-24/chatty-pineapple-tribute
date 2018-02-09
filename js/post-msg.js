@@ -1,9 +1,6 @@
 "use strict";
 
-var chatLog = document.getElementById("chatlog");
-console.log("what is theElement?", chatLog);
-
-
+// may need to change the require....
 const samsMod = require('./getMessages');
 
 function functionName(array) {
