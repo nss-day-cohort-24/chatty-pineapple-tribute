@@ -8,65 +8,57 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/styles.css"> 
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-
 <body>
-    <header>
-          <nav class="navbar navbar-default navbar-fixed-top">
-              <div class="container">
-                <h2>Welcome to <b>GeekChat</b></h2>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+    </div>
+  </nav>
+<div class="container-fluid" style="margin-top:80px">
+<div class="row">
+  <div class="col-sm-3" style="background-color:rgb(255,255,255);"></div>
+      <div class="col-sm-6" style="background-color:#7acdcf;">
+        <div class="page-header">
+            <h2>Chat Application</h2>
+          </div>
+          <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                    <button type="button" class="btn btn-default clearbtn">
+                      Clear Messages
+                    </button>
+                </div><!--panel-heading clr msg-->
+              <div class="panel-body panel-chat">
+                <div id="chatbox"></div>
               </div>
-            </nav>
-  </header>
-  <div class="container-fluid" style="margin-top:100px">
-
-
-
-      <div class="row">
-        <div class="col-sm-3" style="background-color:rgb(255,255,255);"></div>
-              <div class="col-sm-6" style="background-color:#7acdcf;">
-                  <div class="page-header">
-                      <h2 id="newFont">Chat Application</h2>
-                    </div>
-                    <div class="panel-group">
-                        <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <button type="button" class="btn btn-default clearbtn">
-                            Clear Messages
-                          </button>
-                        </div><!--panel-heading clr msg-->
-                         
-                          <div class="panel-body pane-chat"><div id="chatbox"></div></div>
-                        </div><!--panel panel-default-->
-
-                        <div class="panel panel-default"><!--clear msg button-->
-                          
-                          <div class="panel-body initBG">
-                                                 <form onSubmit="return false;">
-                                                      <div class="form-group">
-                                                          <label for="inputdefault">Enter Message here:</label>
-                                                          <input class="form-control" id="inputdefault" type="text">
-                                                        </div>
-                                                  </form>
-                                                  </div>
-                           </div><!--class="panel-body-->
-                                           <div class="panel-footer">
-                                              <div class="checkbox">
-                                                <label><input type="checkbox" onChange="themeColor(chatbox, this);" value="">Change Theme</label>
-                                              </div>
-                                              <div class="checkbox">
-                                                <label><input id="changeFont" type="checkbox" value="" >Change Text Size</label>
-                                              </div>
-                                            </div><!--panel-footer-->
-                                            </div><!--panel panel-default-->
-                      </div><!--panel group-->
-
-          </div><!--col-sm-6-->
-        <div class="col-sm-3" style="background-color:rgb(241, 241, 245);"></div>
-      </div><!--row-->
+              </div><!--panel panel-default-->
+              <div class="panel panel-default"><!--clear msg button-->
+                <div class="panel-body">
+                  <form onSubmit="return false;">
+                    <div class="form-group">
+                      <label for="inputdefault">Enter Message here:</label>
+                      <input class="form-control" id="inputdefault" type="text">
+                    </div><!--form-group-->
+                  </form>
+                </div>
+                </div><!--class="panel-body-->
+              <div class="panel-footer">
+                  <div class="checkbox">
+                    <label><input type="checkbox" onChange="themeColor(chatbox, this);" value="">Change Background</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" value="">Change Text Size</label>
+                  </div>
+              </div><!--panel-footer-->
+            </div><!--panel panel-default-->
+          </div><!--panel group-->
+      </div><!--col-sm-6-->
+    <div class="col-sm-3" style="background-color:rgb(241, 241, 245);"></div>
+  </div><!--row-->
   </div><!--container-fluid-->
 <!--  <div id="chatbox">chatbox</div>
               <div id="chatlog">chatlog</div>
@@ -74,9 +66,6 @@
               <div id="themechange">themechange</div>-->
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-              <script src="js/main.js"></script>
-              <script src="js/input.js"></script>
-              <script src="js/theme.js"></script>
               <script src="dist/app.js"></script>
 </body>
 </html>
