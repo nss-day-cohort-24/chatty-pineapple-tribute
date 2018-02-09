@@ -18,7 +18,7 @@ function showData(taco) {
     for (item in taco){
         let messageItem = taco[item];
 
-          messageJson += `<div id="textOptions"><h5> ${messageItem.user}:${messageItem.message}<h5></div>`;
+          messageJson += `<div><h5><b>${messageItem.user}:</b>  ${messageItem.message}<h5></div>`;
     }
 
 
@@ -32,8 +32,8 @@ dataMessages.send();
 
 let enterMessage = require("./input");
 let getMessages = require("./input");
-// let clearMessages = require("./");
-// let changeTheme = require("./");
+let largeFont = require("./font");
+let changeTheme = require("./theme");
 // let deleteMessage = require("./");
 
 // let chatBox = {
@@ -44,4 +44,5 @@ let getMessages = require("./input");
 //   deleteMessage
 // };
 document.addEventListener("keydown", enterMessage.submitMessage);
+document.addEventListener("change", largeFont.fontFunctionBig);
 // console.log(chatBox.enterMessage.submitMessage());
