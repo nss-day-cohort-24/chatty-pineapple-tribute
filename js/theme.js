@@ -3,12 +3,16 @@
 "use strict";
 
 function themeColor(x, _this) {
-	if (_this.checked) {
-	  x.style.backgroundColor = '#333';
-	} else  {
-	  x.style.backgroundColor = '#DCDCDC';
-	}
+  if (_this.checked) {
+		x.style.backgroundColor = '#2c314f';
+		x.style.color = 'white';
+  } else  {
+		x.style.backgroundColor = '#FFFFFF';
+		x.style.color = 'black';
+		
   }
+}
+
 
 
 

@@ -1,6 +1,7 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack: 'Montserrat', sans-serif;
 $primary-color: #333;
 $secondary-color: #DCDCDC;
+$main-color: #7acdcf;
 
 body {
     font: 125% $font-stack;
@@ -8,9 +9,9 @@ body {
     padding-top: 100px;
   }
 
-.navbar {
-    color: rgb(44, 85, 133);
-    height:75px;
+  .navbar {
+    background-color: $main-color;
+    border-color: #E7E7E7;
 }
 
 .page-header {
@@ -27,9 +28,9 @@ body {
 }
 
 .panel-chat{
-    line-height: 5em !important;
+    line-height: 1.6em !important;
 }
 
-.initBG { 
+/*.initBG { 
     background-color: $secondary-color; 
-}
+}*/
