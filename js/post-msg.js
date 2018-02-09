@@ -1,3 +1,4 @@
+"use strict";
 var chatLog = document.getElementById("chatlog");
 console.log("what is theElement?", chatLog);
 
