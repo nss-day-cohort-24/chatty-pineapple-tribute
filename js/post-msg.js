@@ -1,5 +1,6 @@
 "use strict";
 
+// may need to change the require....
 const samsMod = require('./getMessages');
 
 function functionName(array) {
