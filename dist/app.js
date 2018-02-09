@@ -3,23 +3,35 @@
 
 "use strict";
 
-let input = document.querySelector('#inputdefault');
-let messages = [];
-
-function submitMessage(e) {
-  // console.log("any text");
-  if(e.keyCode == 13 && input.value !== null) {
-    messages.push(input.value);
-    console.log(messages);
-    input.value = "";
-  }
-}
-// getMessages() {
+// let input = document.querySelector('#inputdefault');
+// let messages = [];
+//
+// let submitMessage = function(e) {
+//   // console.log("any text");
+//   if(e.keyCode == 13 && input.value !== null) {
+//     messages.push(input.value);
+//     input.value = "";
+//   }
+// };
+//
+// let getMessages = ()=> {
 //   return messages;
 // };
+//
+// module.exports = {submitMessage, getMessages};
 
-module.exports = {submitMessage};
-// , getMessages
+
+
+
+let something = (id, message)=> {
+  let aRay = [];
+  aRay.push(message);
+  document.querySelector(id).innerHTML += `<div class="message"><p>${message}<button>Delete</button></p></div>`;
+  console.log(aRay);
+  };
+
+
+module.exports = {something};
 
 },{}],2:[function(require,module,exports){
 "use strict";
@@ -54,20 +66,28 @@ dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
 
-let enterMessage = require("./input");
-// let createDButton = require("./");
-// let clearMessages = require("./");
+// let submitMessage = require("./input");
+// let getMessages = require("./input");
+let postUserMessage = require("./input");
 // let changeTheme = require("./");
 // let deleteMessage = require("./");
 
-// let chatBox = {
-//   enterMessage,
+//let chatBox = {
+//   submitMessage
 //   createDButton,
 //   clearMessages,
 //   changeTheme,
 //   deleteMessage
-// };
-document.addEventListener("keydown", enterMessage.submitMessage);
-// console.log(chatBox.enterMessage.submitMessage());
+//};
+
+let input = document.querySelector('#inputdefault');
+input.addEventListener("keydown", (e) => {
+  if (e.key === 'Enter') {
+      let message = document.querySelector('#inputdefault').value;
+      postUserMessage.something('#chatbox', message);
+      input.value="";
+  }
+});
+// document.addEventListener("keydown", (postUserMessage.postMessage));
 
 },{"./input":1}]},{},[2]);

@@ -2,19 +2,32 @@
 
 "use strict";
 
-let input = document.querySelector('#inputdefault');
-let messages = [];
+// let input = document.querySelector('#inputdefault');
+// let messages = [];
+//
+// let submitMessage = function(e) {
+//   // console.log("any text");
+//   if(e.keyCode == 13 && input.value !== null) {
+//     messages.push(input.value);
+//     input.value = "";
+//   }
+// };
+//
+// let getMessages = ()=> {
+//   return messages;
+// };
+//
+// module.exports = {submitMessage, getMessages};
 
-function submitMessage(e) {
-  // console.log("any text");
-  if(e.keyCode == 13 && input.value !== null) {
-    messages.push(input.value);
-    console.log(messages);
-    input.value = "";
-  }
-}
-function getMessages() {
-  return messages;
-}
 
-module.exports = {submitMessage, getMessages};
+
+
+let something = (id, message)=> {
+  let aRay = [];
+  aRay.push(message);
+  document.querySelector(id).innerHTML += `<div class="message"><p>${message}<button>Delete</button></p></div>`;
+  console.log(aRay);
+  };
+
+
+module.exports = {something};
