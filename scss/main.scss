@@ -32,6 +32,10 @@ body {
     line-height: 1.6em !important;
 }
 
+.panel-body{
+    overflow: auto;
+}
+
 /*.initBG { 
     background-color: $secondary-color; 
 }*/
