@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
-<body id="newFont">
+<body>
     <header>
           <nav class="navbar navbar-default navbar-fixed-top">
               <div class="container">
@@ -29,7 +29,7 @@
         <div class="col-sm-3" style="background-color:rgb(255,255,255);"></div>
               <div class="col-sm-6" style="background-color:#7acdcf;">
                   <div class="page-header">
-                      <h2>Chat Application</h2>
+                      <h2 id="newFont">Chat Application</h2>
                     </div>
                     <div class="panel-group">
                         <div class="panel panel-default">
@@ -55,10 +55,10 @@
                            </div><!--class="panel-body-->
                                            <div class="panel-footer">
                                               <div class="checkbox">
-                                                <label><input type="checkbox" onChange="themeColor(chatbox, this);" value="">Change Background</label>
+                                                <label><input type="checkbox" onChange="themeColor(chatbox, this);" value="">Change Theme</label>
                                               </div>
                                               <div class="checkbox">
-                                                <label><input type="checkbox" value="" onclick"fontFunctionBig()">Change Text Size</label>
+                                                <label><input id="changeFont" type="checkbox" value="" >Change Text Size</label>
                                               </div>
                                             </div><!--panel-footer-->
                                             </div><!--panel panel-default-->
