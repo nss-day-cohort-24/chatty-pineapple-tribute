@@ -9,8 +9,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/styles.css"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
+
 <body id="newFont">
     <header>
           <nav class="navbar navbar-default navbar-fixed-top">
@@ -22,9 +24,10 @@
   <div class="container-fluid" style="margin-top:100px">
 
 
+
       <div class="row">
         <div class="col-sm-3" style="background-color:rgb(255,255,255);"></div>
-              <div class="col-sm-6" style="background-color:rgb(44, 85, 133);">
+              <div class="col-sm-6" style="background-color:#7acdcf;">
                   <div class="page-header">
                       <h2>Chat Application</h2>
                     </div>
@@ -36,7 +39,7 @@
                           </button>
                         </div><!--panel-heading clr msg-->
                          
-                          <div class="panel-body"><div id="chatbox" class="initBG">Chatbox</div></div>
+                          <div class="panel-body"><div id="chatbox">Chatbox</div></div>
                         </div><!--panel panel-default-->
 
                         <div class="panel panel-default"><!--clear msg button-->
@@ -52,7 +55,7 @@
                            </div><!--class="panel-body-->
                                            <div class="panel-footer">
                                               <div class="checkbox">
-                                                <label><input type="checkbox" onChange="themeColor(initBG, this);" value="">Change Background</label>
+                                                <label><input type="checkbox" onChange="themeColor(chatbox, this);" value="">Change Background</label>
                                               </div>
                                               <div class="checkbox">
                                                 <label><input type="checkbox" value="" onclick"fontFunctionBig()">Change Text Size</label>
