@@ -13,8 +13,8 @@ function submitMessage(e) {
     input.value = "";
   }
 }
-getMessages() {
+function getMessages() {
   return messages;
-};
+}
 
 module.exports = {submitMessage, getMessages};
