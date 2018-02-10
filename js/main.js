@@ -30,25 +30,17 @@ dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
 
-// let submitMessage = require("./input");
 // let getMessages = require("./input");
 let postUserMessage = require("./input");
 // let changeTheme = require("./");
 // let deleteMessage = require("./");
 
-//let chatBox = {
-//   submitMessage
-//   createDButton,
-//   clearMessages,
-//   changeTheme,
-//   deleteMessage
-//};
 
 let input = document.querySelector('#inputdefault');
 input.addEventListener("keydown", (e) => {
   if (e.key === 'Enter') {
       let message = document.querySelector('#inputdefault').value;
-      postUserMessage.something('#chatbox', message);
+      postUserMessage.postMessage('#chatbox', message);
       input.value="";
   }
 });

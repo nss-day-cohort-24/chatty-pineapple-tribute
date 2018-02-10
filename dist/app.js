@@ -3,27 +3,7 @@
 
 "use strict";
 
-// let input = document.querySelector('#inputdefault');
-// let messages = [];
-//
-// let submitMessage = function(e) {
-//   // console.log("any text");
-//   if(e.keyCode == 13 && input.value !== null) {
-//     messages.push(input.value);
-//     input.value = "";
-//   }
-// };
-//
-// let getMessages = ()=> {
-//   return messages;
-// };
-//
-// module.exports = {submitMessage, getMessages};
-
-
-
-
-let something = (id, message)=> {
+let postMessage = (id, message)=> {
   let aRay = [];
   aRay.push(message);
   document.querySelector(id).innerHTML += `<div class="message"><p>${message}<button>Delete</button></p></div>`;
@@ -31,7 +11,7 @@ let something = (id, message)=> {
   };
 
 
-module.exports = {something};
+module.exports = {postMessage};
 
 },{}],2:[function(require,module,exports){
 "use strict";
@@ -66,25 +46,17 @@ dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
 
-// let submitMessage = require("./input");
 // let getMessages = require("./input");
 let postUserMessage = require("./input");
 // let changeTheme = require("./");
 // let deleteMessage = require("./");
 
-//let chatBox = {
-//   submitMessage
-//   createDButton,
-//   clearMessages,
-//   changeTheme,
-//   deleteMessage
-//};
 
 let input = document.querySelector('#inputdefault');
 input.addEventListener("keydown", (e) => {
   if (e.key === 'Enter') {
       let message = document.querySelector('#inputdefault').value;
-      postUserMessage.something('#chatbox', message);
+      postUserMessage.postMessage('#chatbox', message);
       input.value="";
   }
 });
