@@ -1,21 +1,36 @@
 (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
+"use strict";
+
+let deleteMsg = (line) => {
+  if(line.className == 'del-line') {
+    let button = event.target;
+    let p = button.parentNode;
+    let div = p.parentNode;
+    let chatbox = div.parentNode;
+    chatbox.removeChild(div);
+  }
+};
+
+module.exports = {deleteMsg};
+
+},{}],2:[function(require,module,exports){
 //This module will take the users input and will return the message after a key press
 
 "use strict";
+let aRay = [];
 
 let postMessage = (id, message)=> {
-  let aRay = [];
   aRay.push(message);
-  document.querySelector(id).innerHTML += `<div class="message"><p>${message}<button>Delete</button></p></div>`;
-  console.log(aRay);
+  document.querySelector(id).innerHTML += `<div class="message"><p>${message}<button class="del-line">Delete</button></p></div>`;
   };
 
 
 module.exports = {postMessage};
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
+let chatbox = document.getElementById('chatbox');
 let dataMessages = new XMLHttpRequest();
 
 dataMessages.addEventListener("load", postMessage);
@@ -49,7 +64,7 @@ dataMessages.send();
 // let getMessages = require("./input");
 let postUserMessage = require("./input");
 // let changeTheme = require("./");
-// let deleteMessage = require("./");
+let deleteMessage = require("./del-msg");
 
 
 let input = document.querySelector('#inputdefault');
@@ -61,8 +76,11 @@ input.addEventListener("keydown", (e) => {
   }
 });
 
+chatbox.addEventListener('click', (event) => {
+  let line = event.target;
+  deleteMessage.deleteMsg(line);
+});
+
 document.addEventListener("change", largeFont.fontFunctionBig);
-// console.log(chatBox.enterMessage.submitMessage());
 
-
-},{"./input":1}]},{},[2]);
+},{"./del-msg":1,"./input":2}]},{},[3]);

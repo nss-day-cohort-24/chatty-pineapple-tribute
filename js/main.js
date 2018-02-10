@@ -1,5 +1,6 @@
 "use strict";
 
+let chatbox = document.getElementById('chatbox');
 let dataMessages = new XMLHttpRequest();
 
 dataMessages.addEventListener("load", postMessage);
@@ -33,7 +34,7 @@ dataMessages.send();
 // let getMessages = require("./input");
 let postUserMessage = require("./input");
 // let changeTheme = require("./");
-// let deleteMessage = require("./");
+let deleteMessage = require("./del-msg");
 
 
 let input = document.querySelector('#inputdefault');
@@ -45,6 +46,9 @@ input.addEventListener("keydown", (e) => {
   }
 });
 
-document.addEventListener("change", largeFont.fontFunctionBig);
-// console.log(chatBox.enterMessage.submitMessage());
+chatbox.addEventListener('click', (event) => {
+  let line = event.target;
+  deleteMessage.deleteMsg(line);
+});
 
+document.addEventListener("change", largeFont.fontFunctionBig);
