@@ -30,19 +30,21 @@ dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
 
-let enterMessage = require("./input");
-let getMessages = require("./input");
-let largeFont = require("./font");
-let changeTheme = require("./theme");
+// let getMessages = require("./input");
+let postUserMessage = require("./input");
+// let changeTheme = require("./");
 // let deleteMessage = require("./");
 
-// let chatBox = {
-//   enterMessage,
-//   createDButton,
-//   clearMessages,
-//   changeTheme,
-//   deleteMessage
-// };
-document.addEventListener("keydown", enterMessage.submitMessage);
+
+let input = document.querySelector('#inputdefault');
+input.addEventListener("keydown", (e) => {
+  if (e.key === 'Enter') {
+      let message = document.querySelector('#inputdefault').value;
+      postUserMessage.postMessage('#chatbox', message);
+      input.value="";
+  }
+});
+
 document.addEventListener("change", largeFont.fontFunctionBig);
 // console.log(chatBox.enterMessage.submitMessage());
+

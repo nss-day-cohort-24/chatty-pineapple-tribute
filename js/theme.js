@@ -9,14 +9,9 @@ function themeColor(x, _this) {
   } else  {
 		x.style.backgroundColor = '#FFFFFF';
 		x.style.color = 'black';
-		
+
   }
 }
-
-
-
-
-
 
 
  module.exports = themeColor;

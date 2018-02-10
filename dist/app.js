@@ -29,22 +29,16 @@ module.exports = {fontFunctionBig};
 
 "use strict";
 
-let input = document.querySelector('#inputdefault');
-let messages = [];
 
-function submitMessage(e) {
-  // console.log("any text");
-  if(e.keyCode == 13 && input.value !== null) {
-    messages.push(input.value);
-    console.log(messages);
-    input.value = "";
-  }
-}
-function getMessages() {
-  return messages;
-}
+let postMessage = (id, message)=> {
+  let aRay = [];
+  aRay.push(message);
+  document.querySelector(id).innerHTML += `<div class="message"><p>${message}<button>Delete</button></p></div>`;
+  console.log(aRay);
+  };
 
-module.exports = {submitMessage, getMessages};
+module.exports = {postMessage};
+
 
 },{}],3:[function(require,module,exports){
 "use strict";
@@ -78,23 +72,22 @@ function showData(taco) {
 dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
-
-let enterMessage = require("./input");
-let getMessages = require("./input");
-let largeFont = require("./font");
-let changeTheme = require("./theme");
+// let getMessages = require("./input");
+let postUserMessage = require("./input");
+// let changeTheme = require("./");
 // let deleteMessage = require("./");
 
-// let chatBox = {
-//   enterMessage,
-//   createDButton,
-//   clearMessages,
-//   changeTheme,
-//   deleteMessage
-// };
-document.addEventListener("keydown", enterMessage.submitMessage);
+
+let input = document.querySelector('#inputdefault');
+input.addEventListener("keydown", (e) => {
+  if (e.key === 'Enter') {
+      let message = document.querySelector('#inputdefault').value;
+      postUserMessage.postMessage('#chatbox', message);
+      input.value="";
+  }
+});
+  
 document.addEventListener("change", largeFont.fontFunctionBig);
-// console.log(chatBox.enterMessage.submitMessage());
 
 },{"./font":1,"./input":2,"./theme":4}],4:[function(require,module,exports){
 //This module will change the color theme of the chat window.

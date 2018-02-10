@@ -6,7 +6,15 @@
 
 "use strict";
 
-
+var toDelete= document.getElementbyClassName('del-line');
+toDelete.addEventListener('click', (event) => {
+  if(event.target.TagName == 'BUTTON') {
+    let message = event.target;
+    toDelete.removeChild(message);
+  }
+});
+//attach event Listerner to this new variable
+//function that targets delete button and removes parent Element
 
 
 
