@@ -18,7 +18,7 @@ function showData(taco) {
     for (item in taco){
         let messageItem = taco[item];
 
-          messageJson += `<div id="textOptions"><h5> ${messageItem.user}:${messageItem.message}<h5></div>`;
+          messageJson += `<div><h5><b>${messageItem.user}:</b>  ${messageItem.message}<h5></div>`;
     }
 
 
@@ -44,4 +44,7 @@ input.addEventListener("keydown", (e) => {
       input.value="";
   }
 });
-// document.addEventListener("keydown", (postUserMessage.postMessage));
+
+document.addEventListener("change", largeFont.fontFunctionBig);
+// console.log(chatBox.enterMessage.submitMessage());
+
