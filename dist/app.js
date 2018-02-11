@@ -1,5 +1,12 @@
 (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
 "use strict";
+let aRay = [];
+
+let postMsg = (id, message)=> {
+  aRay.push(message);
+  document.querySelector(id).innerHTML += `<div class="message"><p>${message}<button class="del-line">Delete</button></p></div>`;
+  console.log(aRay);
+  };
 
 let deleteMsg = (line) => {
   if(line.className == 'del-line') {
@@ -8,29 +15,24 @@ let deleteMsg = (line) => {
     let div = p.parentNode;
     let chatbox = div.parentNode;
     chatbox.removeChild(div);
+    // let pos = aRay.indexOf(p.textContent);
+    // console.log(p.textContent);
+    // aRay.splice(pos, 1);
+    // console.log(aRay);
   }
 };
 
-module.exports = {deleteMsg};
+// let allMsgs = () => {
+//   return aRay;
+// };
+
+module.exports = {postMsg, deleteMsg};
 
 },{}],2:[function(require,module,exports){
-//This module will take the users input and will return the message after a key press
-
-"use strict";
-let aRay = [];
-
-let postMessage = (id, message)=> {
-  aRay.push(message);
-  document.querySelector(id).innerHTML += `<div class="message"><p>${message}<button class="del-line">Delete</button></p></div>`;
-  };
-
-
-module.exports = {postMessage};
-
-},{}],3:[function(require,module,exports){
 "use strict";
 
 let chatbox = document.getElementById('chatbox');
+let input = document.querySelector('#inputdefault');
 let dataMessages = new XMLHttpRequest();
 
 dataMessages.addEventListener("load", postMessage);
@@ -60,27 +62,22 @@ function showData(taco) {
 dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
-
-// let getMessages = require("./input");
-let postUserMessage = require("./input");
+let userMessage = require("./add_delete_msg");
 // let changeTheme = require("./");
-let deleteMessage = require("./del-msg");
 
-
-let input = document.querySelector('#inputdefault');
 input.addEventListener("keydown", (e) => {
   if (e.key === 'Enter') {
       let message = document.querySelector('#inputdefault').value;
-      postUserMessage.postMessage('#chatbox', message);
+      userMessage.postMsg('#chatbox', message);
       input.value="";
   }
 });
 
 chatbox.addEventListener('click', (event) => {
   let line = event.target;
-  deleteMessage.deleteMsg(line);
+  userMessage.deleteMsg(line);
 });
 
-document.addEventListener("change", largeFont.fontFunctionBig);
+// document.addEventListener("change", largeFont.fontFunctionBig);
 
-},{"./del-msg":1,"./input":2}]},{},[3]);
+},{"./add_delete_msg":1}]},{},[2]);
