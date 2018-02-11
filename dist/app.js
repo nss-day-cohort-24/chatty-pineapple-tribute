@@ -51,7 +51,8 @@ function showData(taco) {
     for (item in taco){
         let messageItem = taco[item];
 
-          messageJson += `<div><h5><b>${messageItem.user}:</b>  ${messageItem.message}<h5></div>`;
+          messageJson += `<div><h5><b>${messageItem.user}:</b>  ${messageItem.message}</h5></div>`;
+          //messageJson += `<div><p><b>${messageItem.user}:</b>  ${messageItem.message}<button class="del-line">Delete</button></p></div>`;
     }
 
 
@@ -78,6 +79,34 @@ chatbox.addEventListener('click', (event) => {
   userMessage.deleteMsg(line);
 });
 
+let theme = require("./theme");
+
 // document.addEventListener("change", largeFont.fontFunctionBig);
 
-},{"./add_delete_msg":1}]},{},[2]);
+},{"./add_delete_msg":1,"./theme":3}],3:[function(require,module,exports){
+//This module will change the color theme of the chat window.
+
+"use strict";
+
+
+
+var darkTheme = document.getElementById("Checkbox1");
+var chatbox = document.getElementById("chatbox");
+
+
+function themeColor() {
+    if (darkTheme.checked === true) {
+        chatbox.style.backgroundColor = '#2c314f';
+        chatbox.style.color = 'white';
+        console.log("the box is checked");
+    } else if (darkTheme.checked === false) {
+      chatbox.style.backgroundColor = '#FFFFFF';
+      chatbox.style.color = 'black';
+console.log("the box is not checked");
+    }
+}
+darkTheme.addEventListener("click", themeColor);
+
+ module.exports = {themeColor};
+
+},{}]},{},[2]);
