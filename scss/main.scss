@@ -6,35 +6,80 @@ $main-color: #7acdcf;
 body {
     font: 125% $font-stack;
     color: $primary-color;
-    padding-top: 100px;
+    margin-top: 180px;
   }
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+    padding-top: 100px;
+}
 
   .navbar {
     background-color: $main-color;
     border-color: #E7E7E7;
+    height: 85px;
+}
+ .navbar-header h1 {
+     color: white;
+     padding:0;
+     font-family: $font-stack;
 }
 
 .page-header {
     text-align: center;
     color: white;
+    padding:0;
+    margin:0;
 }
+
+
+.logoimg {
+    margin:12px;
+    display: block;
+    
+}
+
+.panel-heading{
+    height: 50px;
+}
+
+.panel-heading button{
+    display: block;
+    float: right;
+    border: 10px;
+    font-size: 14px;
+}
+.clearbtn:hover {
+    background-color: #2c314f;
+    color: white;
+}
+
 
 #chatbox {
-    height: 200px;
+    height: 250px;
     margin: 8px;
-    padding: 10px;
+    padding: 8px;
    // background-color: $secondary-color; 
-    
-
 }
+
+//panel-body overflow takes care of accomodating more messages & scrolling of #chatbox
+.panel-body{
+    overflow: auto;
+}
+
+
+
+
+
 
 .panel-chat{
     line-height: 1.6em !important;
 }
 
-.panel-body{
-    overflow: auto;
-}
 
 /*.initBG { 
     background-color: $secondary-color; 
