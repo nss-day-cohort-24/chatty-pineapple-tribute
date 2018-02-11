@@ -1,6 +1,7 @@
 "use strict";
 
 let chatbox = document.getElementById('chatbox');
+let input = document.querySelector('#inputdefault');
 let dataMessages = new XMLHttpRequest();
 
 dataMessages.addEventListener("load", postMessage);
@@ -30,25 +31,20 @@ function showData(taco) {
 dataMessages.open("GET", "messages.json");
 dataMessages.send();
 
-
-// let getMessages = require("./input");
-let postUserMessage = require("./input");
+let userMessage = require("./add_delete_msg");
 // let changeTheme = require("./");
-let deleteMessage = require("./del-msg");
 
-
-let input = document.querySelector('#inputdefault');
 input.addEventListener("keydown", (e) => {
   if (e.key === 'Enter') {
       let message = document.querySelector('#inputdefault').value;
-      postUserMessage.postMessage('#chatbox', message);
+      userMessage.postMsg('#chatbox', message);
       input.value="";
   }
 });
 
 chatbox.addEventListener('click', (event) => {
   let line = event.target;
-  deleteMessage.deleteMsg(line);
+  userMessage.deleteMsg(line);
 });
 
-document.addEventListener("change", largeFont.fontFunctionBig);
+// document.addEventListener("change", largeFont.fontFunctionBig);
