@@ -11,19 +11,19 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="297">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">WebSiteName</a>
+        <h1>Welcome to Geek Chat</h1>
       </div>
     </div>
   </nav>
-<div class="container-fluid" style="margin-top:80px">
+<div class="container-fluid" style="height:1500px">
 <div class="row">
   <div class="col-sm-3" style="background-color:rgb(255,255,255);"></div>
       <div class="col-sm-6" style="background-color:#7acdcf;">
         <div class="page-header">
-            <h2>Chat Application</h2>
+            <div><img src="images/geek_chat-4.png" alt="geek_chat icon" width="60" height="69" class="logoimg"></div>
           </div>
           <div class="panel-group">
               <div class="panel panel-default">
@@ -32,8 +32,8 @@
                       Clear Messages
                     </button>
                 </div><!--panel-heading clr msg-->
-              <div class="panel-body panel-chat">
-                <div id="chatbox"></div>
+              <div class="panel-body panel-chat" id="chatbox">
+                <!--<div id="chatbox"></div>-->
               </div>
               </div><!--panel panel-default-->
               <div class="panel panel-default"><!--clear msg button-->
@@ -66,6 +66,7 @@
               <div id="themechange">themechange</div>-->
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
               <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+              <script src="js/theme.js"></script>
               <script src="dist/app.js"></script>
 </body>
 </html>
