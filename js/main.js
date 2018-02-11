@@ -20,7 +20,8 @@ function showData(taco) {
     for (item in taco){
         let messageItem = taco[item];
 
-          messageJson += `<div><h5><b>${messageItem.user}:</b>  ${messageItem.message}<h5></div>`;
+          messageJson += `<div><h5><b>${messageItem.user}:</b>  ${messageItem.message}</h5></div>`;
+          //messageJson += `<div><p><b>${messageItem.user}:</b>  ${messageItem.message}<button class="del-line">Delete</button></p></div>`;
     }
 
 
@@ -46,5 +47,7 @@ chatbox.addEventListener('click', (event) => {
   let line = event.target;
   userMessage.deleteMsg(line);
 });
+
+let theme = require("./theme");
 
 // document.addEventListener("change", largeFont.fontFunctionBig);
