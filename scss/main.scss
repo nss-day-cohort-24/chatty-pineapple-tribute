@@ -1,6 +1,6 @@
 $font-stack: 'Montserrat', sans-serif;
 $font-message: 'Lato', sans-serif;
-$primary-color: #333;
+$primary-color: #1b1d28;
 $secondary-color: #DCDCDC;
 $main-color: #7acdcf;
 $gray-color:#d8d4d4;
@@ -29,6 +29,7 @@ body {
      color: white;
      padding:0;
      font-family: $font-stack;
+     font-size: 55px;
 }
 
 .page-header {
@@ -54,6 +55,8 @@ body {
     float: right;
     border: 10px;
     font-size: 14px;
+    border: 2px solid $primary-color;
+    padding:2px 4px;
 }
 .clearbtn:hover {
     background-color: #2c314f;
@@ -67,7 +70,7 @@ body {
     padding: 8px;
    // background-color: $secondary-color; 
    font-family: $font-message;
-   font-size: 16px;
+   font-size: 17px;
 }
 
 //panel-body overflow takes care of accomodating more messages & scrolling of #chatbox
