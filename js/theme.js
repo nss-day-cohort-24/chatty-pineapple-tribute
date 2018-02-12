@@ -6,6 +6,8 @@
 
 var darkTheme = document.getElementById("Checkbox1");
 var chatbox = document.getElementById("chatbox");
+var largeFont = document.getElementById("Checkbox2");
+var messageBox = document.getElementById("message-container");
 
 
 function themeColor() {
@@ -21,4 +23,14 @@ console.log("the box is not checked");
 }
 darkTheme.addEventListener("click", themeColor);
 
- module.exports = {themeColor};
+function changeFontSize() {
+    if (largeFont.checked === true) {
+        chatbox.style.fontSize = "2em";
+    } else if (largeFont.checked === false) {
+        chatbox.style.fontSize = "";
+    }
+}
+
+largeFont.addEventListener("click", changeFontSize);
+
+ module.exports = {themeColor, changeFontSize};
