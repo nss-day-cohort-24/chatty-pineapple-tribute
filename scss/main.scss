@@ -1,4 +1,5 @@
 $font-stack: 'Montserrat', sans-serif;
+$font-message: 'Lato', sans-serif;
 $primary-color: #333;
 $secondary-color: #DCDCDC;
 $main-color: #7acdcf;
@@ -61,10 +62,12 @@ body {
 
 
 #chatbox {
-    height: 250px;
+    height: 350px;
     margin: 8px;
     padding: 8px;
    // background-color: $secondary-color; 
+   font-family: $font-message;
+   font-size: 16px;
 }
 
 //panel-body overflow takes care of accomodating more messages & scrolling of #chatbox
@@ -91,7 +94,7 @@ body {
     width: 3%;
     float: right;
     background-color: $gray-color;
-    //font-size: 10px;
+    font-size: 10px;
     padding: 0.5px;
     border-radius: 6px;
     
