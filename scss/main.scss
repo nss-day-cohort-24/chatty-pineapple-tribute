@@ -2,6 +2,7 @@ $font-stack: 'Montserrat', sans-serif;
 $primary-color: #333;
 $secondary-color: #DCDCDC;
 $main-color: #7acdcf;
+$gray-color:#d8d4d4;
 
 body {
     font: 125% $font-stack;
@@ -73,13 +74,32 @@ body {
 
 
 
-
-
-
 .panel-chat{
     line-height: 1.6em !important;
 }
 
+.message{
+    padding:5px;
+    margin:0;
+}
+
+.message p{
+  width: 97%;
+
+ 
+}
+
+.message button{
+    width: 3%;
+    float: right;
+    background-color: $gray-color;
+    font-size: 10px;
+    padding: 0.75px;
+    border-radius: 6px;
+    
+  
+   
+  }
 
 /*.initBG { 
     background-color: $secondary-color; 
