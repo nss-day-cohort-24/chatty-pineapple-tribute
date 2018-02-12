@@ -27,9 +27,12 @@ body {
 }
  .navbar-header h1 {
      color: white;
-     padding:0;
+     padding-top:10px;
+     padding-bottom:35px;
      font-family: $font-stack;
      font-size: 55px;
+     margin:0px;
+     text-align: center;
 }
 
 .page-header {
@@ -91,6 +94,7 @@ body {
 
 .message p{
   width: 97%;
+  padding: 2px;
 }
 
 .message button{
@@ -99,7 +103,7 @@ body {
     background-color: $gray-color;
     font-size: 10px;
     padding: 0.5px;
-    border-radius: 6px;
+    border-radius: 3px;
     
   
    
